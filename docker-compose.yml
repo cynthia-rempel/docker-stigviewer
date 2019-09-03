@@ -4,7 +4,7 @@ services:
   stigviewer:
     build:
       context: ./stigviewer
-    command: init
+    command: java -jar STIGViewer-2.9.jar
     container_name: stigviewer
     image: stigviewer:test
     volumes:
