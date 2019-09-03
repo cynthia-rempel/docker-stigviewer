@@ -1,0 +1,14 @@
+version: "2"
+
+services:
+  stigviewer:
+    build:
+      context: ./stigviewer
+    command: init
+    container_name: stigviewer
+    image: stigviewer:test
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /home/rfirstaid/.Xauthority:/root/.Xauthority
+    environment:
+      - DISPLAY
